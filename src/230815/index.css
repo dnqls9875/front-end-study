@@ -1,0 +1,16 @@
+h1 {
+  text-align: center;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: 15px;
+  text-decoration: rgb(227, 117, 7) underline wavy;
+  font-family: Segoe UI, Futura, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 30px;
+}

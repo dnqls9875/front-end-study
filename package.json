@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "name": "front-end-study",
+  "description": "프론트엔드 공부내용 정리 공간",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
