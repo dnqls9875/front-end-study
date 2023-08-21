@@ -32,13 +32,11 @@
 //   console.log(i);
 // }
 
-// for (var i = 1; i <= 6; i++) {
-//   for (var j = 1; i <= 6; j--) {
-//     if (i + j === 6);
-//     console.log(`[${i} , ${j}]`);
-//     break;
-//   }
-// }
+for (var i = 3; i <= 9; i++) {
+  for (var j = 3; j <= 9; j++) {
+    if (i + j === 9) console.log(`[${i}, ${j}]`);
+  }
+}
 
 // ? while문
 
@@ -117,13 +115,27 @@
 //   }
 // }
 
-var person = {
-  name: "lee",
-  address: "YANG JOO",
-};
+// var person = {
+//   name: "lee",
+//   address: "YANG JOO",
+// };
 
-person.name = "moon";
-person.age = 29;
-delete person.address;
+// person.name = "moon";
+// person.age = 29;
+// delete person.address;
 
-console.log(person);
+// console.log(person);
+
+// let user = {
+//   name: "leewoobin",
+//   age: 28,
+//   marry: "married",
+//   hobby: "WatchingMovie",
+// };
+
+// user.name = "sohyeon";
+// user.age = 29;
+// user.marry = "NotMarried";
+// user.hobby = "makeCoffee";
+
+// console.log(user);
