@@ -8,7 +8,6 @@
 var startElm = document.querySelector("input:first-of-type");
 var endElm = document.querySelector("input:last-of-type");
 var creatGugudanBtn = document.querySelector("button");
-var divElm = document.querySelector("div");
 
 console.log(startElm, endElm);
 
@@ -31,7 +30,7 @@ function gugudan(min, max) {
 }
 
 function gugudanPrint() {
-  divElm.innerHTML =
+  document.querySelector("div").innerHTML =
     gugudan(startElm.value, endElm.value) || "단을 입력해주세요 ❤";
   clearInput();
 }
