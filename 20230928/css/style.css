@@ -1,0 +1,27 @@
+@import url("./reset.css");
+
+.btn {
+  width: 130px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: orange;
+  color: #fff;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button + button {
+  margin-left: 20px;
+}
+
+button:disabled {
+  background-color: #ffd786;
+  cursor: not-allowed;
+}
+
+/* 그루비 사이트 */
