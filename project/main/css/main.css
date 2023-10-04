@@ -6,20 +6,12 @@
   margin-top: 200px;
 }
 .contents h2 {
-  text-align: center;
-  font-size: 48px;
-  line-height: 60px;
   color: #111;
+  font-size: 48px;
+  text-align: center;
+  line-height: 60px;
 }
 /* section-01 groobee-partner-ship */
-.groobee-partner-ship {
-  width: 1500px;
-  margin: 0 auto;
-}
-.partner-company {
-  width: 1500px;
-  margin: 0 auto;
-}
 .partner-company-list {
   display: flex;
   flex-flow: row wrap;
@@ -58,9 +50,9 @@
   align-items: center;
   width: 414px;
   height: 340px;
-  padding: 40px 33px 53px;
   background: #fff;
   border-bottom: 1px solid #eee;
+  padding: 40px 33px 53px;
 }
 .service-list__item:nth-of-type(4),
 :nth-of-type(5),
@@ -77,8 +69,8 @@
   width: 100%;
 }
 .service-list-title {
-  font-size: 26px;
   margin-top: 24px;
+  font-size: 26px;
 }
 .service-list-text {
   color: #666;
@@ -87,8 +79,8 @@
   text-align: center;
 }
 .service-list-link {
-  margin-top: 20px;
   color: #aaa;
+  margin-top: 20px;
   font-weight: bold;
 }
 .service-list-link:hover {
@@ -98,8 +90,6 @@
 
 /* section-03 groobee-success */
 .groobee-success {
-  width: 1500px;
-  margin: 0 auto;
   margin-top: 200px;
 }
 .success-content {
@@ -110,8 +100,8 @@
   left: 50%;
   top: 40%;
   transform: translate(-50%);
-  text-align: center;
   width: 100%;
+  text-align: center;
 }
 .success-content__title h2 {
   color: #fff;
@@ -127,11 +117,12 @@
 .success-content__link {
   display: block;
   width: 100%;
-  text-align: center;
-  padding: 20px;
   border: 2px solid #fff;
   border-radius: 5px;
   color: #fff;
+  font-weight: 600;
+  padding: 20px;
+  text-align: center;
 }
 .success-content__link:hover {
   transition: all linear 0.3s;
@@ -148,42 +139,43 @@
 
 /* section-04 groobee-news */
 .groobee-news {
-  width: 1500px;
-  margin: 200px auto;
+  margin-top: 200px;
 }
 .groobee-news-wrap {
   display: flex;
   justify-content: space-between;
   margin-top: 80px;
 }
+/* left-list */
 .left-list {
   padding-bottom: 32px;
+}
+.left-list h3 {
+  font-size: 26px;
+  margin-top: 30px;
 }
 .groobee-news-wrap-list {
   width: 716px;
 }
+.groobee-news-wrap-list__item {
+  width: 100%;
+}
 .groobee-news-wrap-list__link {
   display: block;
   width: 100%;
+  transition: all linear 0.6s;
 }
 .groobee-news-wrap-list__img {
   display: block;
   width: 100%;
 }
 .groobee-news-wrap-list__text {
-  display: block;
-  width: 100%;
-}
-.groobee-news-wrap-list__text h3 {
-  font-size: 26px;
-  margin-top: 30px;
-  width: 100%;
+  display: inline-block;
 }
 .groobee-news-wrap-list__text h3 span {
   display: block;
-  width: 100%;
-  font-size: 26px;
   color: #111;
+  font-size: 26px;
 }
 .groobee-news-wrap-list__text h3 span:hover {
   border-bottom: 1px solid #000;
@@ -193,19 +185,21 @@
 }
 .groobee-news-wrap-list__text span {
   display: block;
-  font-size: 14px;
   color: #aaa;
   margin-top: 10px;
+  font-size: 14px;
 }
 /* right-list */
+.right-list h3 {
+  white-space: nowrap;
+}
 .right-list h3 span {
-  display: block;
-  width: 100%;
+  display: inline-block;
   margin-top: 0;
   font-size: 20px;
 }
 .right-list .groobee-news-wrap-list__item {
-  padding: 32px 76px 42px 0;
+  padding: 32px 76px 52px 0;
   border-bottom: 1px solid #f4f4f4;
 }
 .right-list .groobee-news-wrap-list__item:first-of-type {
@@ -214,15 +208,17 @@
 .right-list .groobee-news-wrap-list__text {
   overflow: hidden;
   width: 100%;
+}
+.long-text {
+  overflow: hidden;
+  width: 640px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
 /* section-05 footer-banner */
 .footer-banner {
   position: relative;
-  width: 1500px;
-  margin: 0 auto;
+  width: 100%;
   margin-top: 200px;
 }
 
@@ -231,8 +227,8 @@
   left: 50%;
   z-index: 5;
   transform: translate(-50%);
-  text-align: center;
   width: 100%;
+  text-align: center;
   margin-top: 100px;
 }
 .footer-banner__title h2 {
@@ -250,11 +246,12 @@
 .footer-banner__link {
   display: block;
   width: 100%;
-  text-align: center;
-  padding: 20px;
   border: 2px solid #fff;
   border-radius: 5px;
   color: #fff;
+  font-weight: 600;
+  padding: 20px;
+  text-align: center;
 }
 .footer-banner__link:hover {
   transition: all linear 0.3s;
@@ -263,7 +260,4 @@
 }
 .video {
   display: block;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
