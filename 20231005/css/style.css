@@ -1,0 +1,26 @@
+@import url(/20231005/css/reset.css);
+
+button {
+  width: 150px;
+  height: 48px;
+  background-color: orange;
+  color: #fff;
+}
+
+main {
+  width: 500px;
+  height: 500px;
+  background-color: green;
+}
+
+section {
+  width: 250px;
+  height: 250px;
+  background-color: #000;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
