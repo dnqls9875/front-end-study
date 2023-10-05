@@ -1,0 +1,23 @@
+@import url(./reset.css);
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  width: 150px;
+  height: 48px;
+  border-radius: 50px;
+  border: 1px solid #dedede;
+}
+
+li + li {
+  margin-left: 50px;
+}
+
+.active {
+  background-color: orange;
+}

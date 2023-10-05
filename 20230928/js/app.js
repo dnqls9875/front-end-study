@@ -36,36 +36,51 @@ const counterElem = document.querySelector("h1>b");
 let counter = 0;
 const printCounter = () => (counterElem.textContent = counter);
 
-const addBtnHandler = () => {
-  counter++;
-  printCounter();
-};
-const minusBtnHandler = () => {
-  counter <= 0 ? (counter = 0) : counter--;
-  //   if (counter < 0) {
-  //     counter = 0;
-  //   }
+// const addBtnHandler = () => {
+//   counter++;
+//   printCounter();
+// };
+// const minusBtnHandler = () => {
+//   counter <= 0 ? (counter = 0) : counter--;
+//   //   if (counter < 0) {
+//   //     counter = 0;
+//   //   }
 
-  printCounter();
-  //   counter를 1씩 감소한다.
-  //   counter 0보다 작으면 counter 0이다.
-  //   counter를 출력한다.
-};
-const resetBtnHandler = () => {
-  counter = 0;
-  printCounter();
-};
+//   printCounter();
+//   //   counter를 1씩 감소한다.
+//   //   counter 0보다 작으면 counter 0이다.
+//   //   counter를 출력한다.
+// };
+// const resetBtnHandler = () => {
+//   counter = 0;
+//   printCounter();
+// };
 
-const btns = [
-  { elem: addBtn, fn: addBtnHandler },
-  { elem: minusBtn, fn: minusBtnHandler },
-  {
-    elem: resetBtn,
-    fn: resetBtnHandler,
-  },
-];
+const 함수 = (callback) => {
+  callback();
+  printCounter();
+};
 
 const stopBtnHandler = () => confirm("정말 중지 하시겠습니까?") && 이벤트제거();
+
+const btns = [
+  {
+    elem: addBtn,
+    fn: () => 함수(() => counter++),
+  },
+  {
+    elem: minusBtn,
+    fn: () => 함수(() => (counter <= 0 ? (counter = 0) : counter--)),
+  },
+  {
+    elem: resetBtn,
+    fn: () => 함수(() => (counter = 0)),
+  },
+  {
+    elem: stopBtn,
+    fn: stopBtnHandler,
+  },
+];
 
 function 이벤트제거() {
   btns.forEach((btn) => btn.elem.removeEventListener("click", btn.fn));
@@ -87,7 +102,9 @@ function 이벤트제거() {
 //   }
 // };
 
-addBtn.addEventListener("click", addBtnHandler);
-minusBtn.addEventListener("click", minusBtnHandler);
-resetBtn.addEventListener("click", resetBtnHandler);
-stopBtn.addEventListener("click", stopBtnHandler);
+btns.forEach((btn) => btn.elem.addEventListener("click", btn.fn));
+
+// addBtn.addEventListener("click", addBtnHandler);
+// minusBtn.addEventListener("click", minusBtnHandler);
+// resetBtn.addEventListener("click", resetBtnHandler);
+// stopBtn.addEventListener("click", stopBtnHandler);
