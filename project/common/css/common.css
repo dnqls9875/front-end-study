@@ -175,6 +175,7 @@
 }
 .footer-menu-list__link {
   display: block;
+  position: relative;
   color: #fff;
   font-weight: bold;
 }
@@ -187,9 +188,29 @@
   padding-bottom: 3px;
 }
 .footer-menu-list__link .fa {
-  transform: rotate(0);
-  padding-left: 5px;
+  transform: rotate(180deg);
+  margin-left: 5px;
 }
+.sub-footer-menu-list {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  margin-top: 15px;
+  padding: 15px;
+  width: 100px;
+  background-color: #333;
+  border-radius: 5px;
+}
+.active {
+  display: block;
+}
+
+.sub-footer-menu-list__item {
+  padding-top: 10px;
+  color: #fff;
+  font-size: 13px;
+}
+
 .footer-info {
   position: relative;
   font-size: 14px;
