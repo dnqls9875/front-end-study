@@ -1,0 +1,28 @@
+main {
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btns {
+  display: flex;
+  margin-top: 10vh;
+}
+
+.btns li.active {
+  color: red;
+}
+
+.btns li + li {
+  margin-left: 20px;
+}
+
+.tabs li {
+  display: none;
+  height: 300px;
+  border: 1px solid #000;
+}
+
+.tabs li.active {
+  display: block;
+}
