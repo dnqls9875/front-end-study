@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>card</title>
+    <link rel="stylesheet" href="./css/card.css" />
+  </head>
+  <body>
+    <div class="cards">
+      <h1>Payment Card Swipes</h1>
+      <h2>Swipe left through the cards</h2>
+      <div class="cards_inner">
+        <div class="wrap">
+          <div
+            class="cards_inner__card visa ui-draggable ui-draggable-handle ui-draggable-disabled"
+          >
+            <div class="logo"></div>
+          </div>
+          <div
+            class="cards_inner__card mastercard ui-draggable ui-draggable-handle ui-draggable-disabled"
+            style="transform: translateZ(-120px)"
+          >
+            <div class="logo"></div>
+          </div>
+          <div
+            class="cards_inner__card maestro ui-draggable ui-draggable-handle ui-draggable-disabled"
+            style="transform: translateZ(-60px)"
+          >
+            <div class="logo"></div>
+          </div>
+          <div
+            class="cards_inner__card paypal ui-draggable ui-draggable-handle"
+            style="transform: translateZ(0px)"
+          >
+            <div class="logo"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="points">
+      <div class="points_point first"></div>
+      <div class="points_point"></div>
+      <div class="points_point active"></div>
+      <div class="points_point"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./js/card.js"></script>
+  </body>
+</html>
