@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+main {
+  width: 1240px;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+ul:last-of-type {
+  padding-bottom: 0;
+}
+
+ul:first-of-type li {
+  background-color: #ded;
+}
+
+ul:nth-of-type(2) li {
+  background-color: rgb(90, 166, 242);
+}
+
+ul:last-of-type li {
+  background-color: rgb(216, 50, 205);
+}
+
+li {
+  width: 200px;
+  height: 250px;
+}
+
+.info-inner {
+  background-color: #ccc;
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.info-btn {
+  display: block;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 50px auto;
+  height: 50px;
+}
+
+.none-content {
+  display: none;
+}
+
+.show {
+  display: block;
+}
