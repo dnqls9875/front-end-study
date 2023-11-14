@@ -75,26 +75,26 @@ console.log("my name is " + first + last); // 일반적으로 우리가 문자�
 var point;
 console.log(typeof point); // ?답
 
-// point = 10;
-// console.log(typeof point); // ?답
+point = 10;
+console.log(typeof point); // ?답
 
-// point = "Hello";
-// console.log(typeof point); // ?답
+point = "Hello";
+console.log(typeof point); // ?답
 
-// point = true;
-// console.log(typeof point); // ?답
+point = true;
+console.log(typeof point); // ?답
 
-// point = null;
-// console.log(typeof point); // ?답
+point = null;
+console.log(typeof point); // ?답
 
-// point = Symbol();
-// console.log(typeof point); // ?답
+point = Symbol();
+console.log(typeof point); // ?답
 
-// point = {};
-// console.log(typeof point); // ?답
+point = {};
+console.log(typeof point); // ?답
 
-// point = [];
-// console.log(typeof point); // ?답
+point = [];
+console.log(typeof point); // ?답
 
 point = function () {};
 console.log(typeof point); // ?답
