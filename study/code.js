@@ -152,3 +152,76 @@ false && false; // ?
 
 !true; // ?
 !false; // ?
+
+// ? 8.
+// ! for문 문제
+// 0부터 10까지 더하기 하려면
+var num = 0;
+num += 1; // 1
+num += 2; // 3
+num += 3; // 6
+num += 4; // 10
+num += 5; // 15
+num += 6; // 21
+num += 7; // 28
+num += 8; // 36
+num += 9; // 45
+num += 10; // 55
+console.log(num);
+
+var num = 0;
+for (let i = 0; i < 11; i++) {
+  num += i;
+}
+console.log(num);
+
+// 구구단 2단 ~ 9단 for 중첩 문제
+// for (let i = 2; i < 10; i++) {
+//   document.write(`--------- ${i}단 시작 ---------<br>`);
+//   for (let j = 1; j < 10; j++) {
+//     document.write(`${i} x ${j} = ${i * j}<br>`);
+//   }
+// }
+
+// 1. input 선택자 선택, button 선택자 선택
+
+// 2. 아무것도 입력하지 않은 상태에서 구구단 만들기 버튼을 클릭 시 alert값 단을 입력해주세요
+// 나온 후 텍스트로 html안에 단을 입력해주세요 출력
+
+// 3. 구구단 로직 min,max 값으로 어떠한 값을 입력해도 구구단이 계산되게 예를들어 10단 12단 등등
+
+// 4. 버튼 클릭 시 구구단 함수를 html안에 출력될 수 있게
+
+// 5. 구구단 프린트가 되고 input안에 있는 값은 공백으로 초기화 될 수 있게
+
+const stratElem = document.querySelector("input:first-of-type");
+const lastElem = document.querySelector("input:last-of-type");
+const gugudanBtn = document.querySelector("button");
+
+gugudan = function (min, max) {
+  if (stratElem.value === "" || lastElem.value === "") {
+    return alert("단을 입력해주세요 :)");
+  }
+
+  let = gugudanContent = "";
+  for (let i = min; i <= max; i++) {
+    gugudanContent += `<p>==== ${i} 단 시작 ====</p>`;
+    for (let j = 1; j < 10; j++) {
+      gugudanContent += `<p>${i} x ${j} = ${i * j}</p>`;
+    }
+  }
+  return gugudanContent;
+};
+
+guguanPrint = function () {
+  document.querySelector("div").innerHTML =
+    gugudan(stratElem.value, lastElem.value) || "단을 입력해주세요 :)";
+  gugudanClear();
+};
+
+gugudanClear = function () {
+  stratElem.value = "";
+  lastElem.value = "";
+};
+
+gugudanBtn.addEventListener("click", guguanPrint);

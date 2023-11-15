@@ -27,35 +27,35 @@
  * ? if문 대신에 사용할 수 있다.
  */
 
-console.log("문자열" && false) // false
-console.log("문자열" || false) // "문자열"
+console.log("문자열" && false); // false
+console.log("문자열" || false); // "문자열"
 
 /**
  * ! 옵셔널 체이닝 연산자
  * ! 객체에서 주로 활용되고 좌항의 피연산자가 null 또는 undefined인 경우에 undefined가 반환되고 그렇지 않으면 프로퍼티를 참조한다.
- * ! 
+ * !
  */
 
 var user = {
   name: "dongs",
-  age: 13
-}
+  age: 13,
+};
 
-console.log(user.name)
-console.log(user.names?.age) // & names는 user 객체에 없다. 즉 undefined인데 여기서 객체처럼 마침표 표기법을 통해 참조하려고하면 에러가 난다.
+console.log(user.name);
+console.log(user.names?.age); // & names는 user 객체에 없다. 즉 undefined인데 여기서 객체처럼 마침표 표기법을 통해 참조하려고하면 에러가 난다.
 // & 즉 객체가 아닌데 프로퍼티에 접근 하려고하면 에러가 발생하니 옵셔널 체이닝 연산자를 활용해 에러를 방지할 수 있다!
 
-/** 
+/**
  * ! null 병합 연산자
  * ! 왼쪽의 피연산자가 null이나 undefined인 경우에만 오른쪽의 값을 반환한다.
  */
 
-console.log(null ?? "문자열 반환") // 문자열 반환
-console.log(undefined ?? "문자열 반환2") // 문자열 반환2
+console.log(null ?? "문자열 반환"); // 문자열 반환
+console.log(undefined ?? "문자열 반환2"); // 문자열 반환2
 
 // & 단축평가에 경우는 falsy값 모두 적용되지만 null 병합 연산자는 null이나 undefined인 경우에만 작동하는게 차이점이 있다.
-console.log(null || "문자열 반환3") // 문자열 반환3
-console.log(0 || "문자열 반환4") // 문자열 반환4
+console.log(null || "문자열 반환3"); // 문자열 반환3
+console.log(0 || "문자열 반환4"); // 문자열 반환4
 
 /**
  * ! 객체
@@ -68,10 +68,11 @@ console.log(0 || "문자열 반환4") // 문자열 반환4
 var obj = {
   name: "dongs", // 프로퍼티
   age: 12, // 프로퍼티
-  getName: function(){ // 메서드
-    console.log(this.name)
-  }
-}
+  getName: function () {
+    // 메서드
+    console.log(this.name);
+  },
+};
 
 /**
  * ! 객체에 프로퍼티 접근하는 방법 2가지!
@@ -79,20 +80,19 @@ var obj = {
  * ! 마침표 표기법
  * ! 대괄호 표기법
  */
-console.log(user.name) // dongs
-console.log(user.age) // 12
-console.log(user.nnnnname) // 없는 프로퍼티를 사용하면 에러가 아닌 undefined가 나온다.
-console.log(user["name"]) // 대괄호에 따옴표가 없으면 변수로 인식하니 매우 주의해야한다!
-console.log(user["age"])
+console.log(user.name); // dongs
+console.log(user.age); // 12
+console.log(user.nnnnname); // 없는 프로퍼티를 사용하면 에러가 아닌 undefined가 나온다.
+console.log(user["name"]); // 대괄호에 따옴표가 없으면 변수로 인식하니 매우 주의해야한다!
+console.log(user["age"]);
 
 /**
  * ! 프로퍼티를 동적으로 추가, 수정, 삭제하기
  */
 
-obj.hobby = "Foot Ball" // 객체에 없는 프로퍼티를 추가하는 방법.
-obj.age = 22 // 객체에 있는 프로퍼티를 수정
-delete obj.age // 객체에 obj.age 삭제하기
-
+obj.hobby = "Foot Ball"; // 객체에 없는 프로퍼티를 추가하는 방법.
+obj.age = 22; // 객체에 있는 프로퍼티를 수정
+delete obj.age; // 객체에 obj.age 삭제하기
 
 /**
  * & 객체는 쉽게 생각해서 하나의 데이터에 여러개의 값이 들어갈 수 있다라고 생각해주시고, 키와 값 쌍으로 이루어져있는 형태라고 외워주세요!
