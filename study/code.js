@@ -194,34 +194,35 @@ console.log(num);
 
 // 5. 구구단 프린트가 되고 input안에 있는 값은 공백으로 초기화 될 수 있게
 
-const stratElem = document.querySelector("input:first-of-type");
+const startElem = document.querySelector("input:first-of-type");
 const lastElem = document.querySelector("input:last-of-type");
 const gugudanBtn = document.querySelector("button");
 
 gugudan = function (min, max) {
-  if (stratElem.value === "" || lastElem.value === "") {
+  if (startElem.value === "" || lastElem.value === "") {
     return alert("단을 입력해주세요 :)");
   }
 
-  let = gugudanContent = "";
+  let gugudanCtn = "";
   for (let i = min; i <= max; i++) {
-    gugudanContent += `<p>==== ${i} 단 시작 ====</p>`;
+    gugudanCtn += `<p>==== ${i}단 시작 ====</p>`;
     for (let j = 1; j < 10; j++) {
-      gugudanContent += `<p>${i} x ${j} = ${i * j}</p>`;
+      gugudanCtn += `<p>${i} x ${j} = ${i * j}</p>`;
     }
   }
-  return gugudanContent;
+  return gugudanCtn;
 };
 
-guguanPrint = function () {
+gugudanPrint = function () {
+  const gugudanValue = gugudan(startElem.value, lastElem.value);
   document.querySelector("div").innerHTML =
-    gugudan(stratElem.value, lastElem.value) || "단을 입력해주세요 :)";
+    gugudanValue || "단을 입력해 주세요:)";
   gugudanClear();
 };
 
 gugudanClear = function () {
-  stratElem.value = "";
+  startElem.value = "";
   lastElem.value = "";
 };
 
-gugudanBtn.addEventListener("click", guguanPrint);
+gugudanBtn.addEventListener("click", gugudanPrint);
