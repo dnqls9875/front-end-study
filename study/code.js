@@ -213,7 +213,7 @@ gugudan = function (min, max) {
   return gugudanCtn;
 };
 
-gugudanPrint = function () {
+const foo = function gugudanPrint() {
   const gugudanValue = gugudan(startElem.value, lastElem.value);
   document.querySelector("div").innerHTML =
     gugudanValue || "단을 입력해 주세요:)";
