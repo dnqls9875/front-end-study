@@ -60,7 +60,21 @@ var first = "Lee";
 var last = "woobin";
 var fullName = `Lee woobin`;
 
-console.log("my name is " + first + last); // 일반적으로 우리가 문자열을 연결할 때 +를 사용한다.
+console.log(
+  "my name is " +
+    first +
+    " " +
+    last +
+    " " +
+    "내 풀네임은" +
+    " " +
+    fullName +
+    "이야"
+); // 일반적으로 우리가 문자열을 연결할 때 +를 사용한다.
+
+var num = 1;
+var num2 = "2";
+console.log(num + num2); // '12'
 
 // ? 템플릿 리터럴
 
@@ -69,6 +83,7 @@ console.log("my name is " + first + last); // 일반적으로 우리가 문자�
 // ^ 1.문제 위의 변수를 이용하여 템플릿 리터럴 방식으로 표현식을 삽입.
 
 // & 1. 문제 답?
+console.log(`my name is ${first} ${last} 내 풀네임은 ${fullName} 이야`);
 
 // ! 데이터 타입을 확인하기 위해서는 console.log로 참조를 해보면 되는데 타입을 확인하기 위해서는 typeof라는 연산자를 사용
 
@@ -128,13 +143,25 @@ for (let i = 0; i < 3; i++) {
 }
 
 // ? 삼항 조건 연산자 => 조건 ? true : false;
-let c1 = 20;
-let d1 = 10;
+// let c = 20;
+// let d = 10;
 
-const value = c1 < d1 ? "pass" : "fail";
-console.log(value);
+// const value = c < d ? "pass" : "fail";
+// console.log(value); // fail
 
 // ^ 1.문제 삼항 조건 연산자를 if 문으로 변경할 것.
+
+let c = 20;
+let d = 10;
+
+const vaule2 = function () {
+  if (c < d) {
+    console.log("pass");
+  } else {
+    console.log("fail");
+  }
+};
+console.log(vaule2);
 
 // ? 논리 연산자
 
@@ -145,20 +172,20 @@ true || false; // ?
 false || true; // ?
 false || false; // ?
 
-true && true; // ?
-true && false; // ?
-false && true; // ?
-false && false; // ?
+true && true; // ?  // ture
+true && false; // ? // false
+false && true; // ? // false
+false && false; // ? // false
 
-!true; // ?
-!false; // ?
+!true; // ? false
+!false; // ? true
 
 // ? 8.
 // ! for문 문제
 // 0부터 10까지 더하기 하려면
 var num = 0;
-num += 1; // 1
-num += 2; // 3
+num += 1; // 1 num = num + 1 // 1
+num += 2; // 3 1 + 2
 num += 3; // 6
 num += 4; // 10
 num += 5; // 15
@@ -169,11 +196,24 @@ num += 9; // 45
 num += 10; // 55
 console.log(num);
 
+// ! for문으로 변경
 var num = 0;
 for (let i = 0; i < 11; i++) {
   num += i;
 }
 console.log(num);
+
+// ! 8장 if문 문제
+let value1 = 1;
+let value2 = 2;
+let value3 = 3;
+let value4 = 4;
+
+if (value1 < value2 && value3 > value4) {
+  console.log("pass");
+} else {
+  console.log("fail");
+}
 
 // 구구단 2단 ~ 9단 for 중첩 문제
 // for (let i = 2; i < 10; i++) {
@@ -194,35 +234,35 @@ console.log(num);
 
 // 5. 구구단 프린트가 되고 input안에 있는 값은 공백으로 초기화 될 수 있게
 
-const startElem = document.querySelector("input:first-of-type");
-const lastElem = document.querySelector("input:last-of-type");
-const gugudanBtn = document.querySelector("button");
+// const startElem = document.querySelector("input:first-of-type");
+// const lastElem = document.querySelector("input:last-of-type");
+// const gugudanBtn = document.querySelector("button");
 
-gugudan = function (min, max) {
-  if (startElem.value === "" || lastElem.value === "") {
-    return alert("단을 입력해주세요 :)");
-  }
+// gugudan = function (min, max) {
+//   if (startElem.value === "" || lastElem.value === "") {
+//     return alert("단을 입력해주세요 :)");
+//   }
 
-  let gugudanCtn = "";
-  for (let i = min; i <= max; i++) {
-    gugudanCtn += `<p>==== ${i}단 시작 ====</p>`;
-    for (let j = 1; j < 10; j++) {
-      gugudanCtn += `<p>${i} x ${j} = ${i * j}</p>`;
-    }
-  }
-  return gugudanCtn;
-};
+//   let gugudanCtn = "";
+//   for (let i = min; i <= max; i++) {
+//     gugudanCtn += `<p>==== ${i}단 시작 ====</p>`;
+//     for (let j = 1; j < 10; j++) {
+//       gugudanCtn += `<p>${i} x ${j} = ${i * j}</p>`;
+//     }
+//   }
+//   return gugudanCtn;
+// };
 
-const foo = function gugudanPrint() {
-  const gugudanValue = gugudan(startElem.value, lastElem.value);
-  document.querySelector("div").innerHTML =
-    gugudanValue || "단을 입력해 주세요:)";
-  gugudanClear();
-};
+// const foo = function gugudanPrint() {
+//   const gugudanValue = gugudan(startElem.value, lastElem.value);
+//   document.querySelector("div").innerHTML =
+//     gugudanValue || "단을 입력해 주세요:)";
+//   gugudanClear();
+// };
 
-gugudanClear = function () {
-  startElem.value = "";
-  lastElem.value = "";
-};
+// gugudanClear = function () {
+//   startElem.value = "";
+//   lastElem.value = "";
+// };
 
-gugudanBtn.addEventListener("click", gugudanPrint);
+// gugudanBtn.addEventListener("click", gugudanPrint);
